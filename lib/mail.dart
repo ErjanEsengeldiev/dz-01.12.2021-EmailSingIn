@@ -37,12 +37,19 @@ bool s = false;
     for (int i = 0; i < ListOfUsers.length; i++) {
       if (_controllerOne.text == ListOfUsers[i].email &&
           _controllerTwo.text == ListOfUsers[i].password) {
+            setState(() {
+              
+            });
              Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const FirstDz()),
+          
+          
         );
+        break;
       }
-      else{
+      else if (_controllerOne.text != ListOfUsers[i].email &&
+          _controllerTwo.text != ListOfUsers[i].password){
 
         setState(() {
           s = true;
